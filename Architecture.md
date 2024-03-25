@@ -1,40 +1,31 @@
-Note: Below is the proposed architecture for the threaded chatbot project.Since the project is in very early stages of development, there may be drastic changes in the provided architecture.
-The provided code implements a simple chatbot with a web interface using Python, Flask for the web server, and threading for handling multiple requests simultaneously. Let's break down the architecture:
+Required Tech Stack for the Process Scheduler Simulator Application:
 
-1. Flask Web Server:
-    - The code utilizes the Flask framework to create a web server. Flask is a micro web framework for Python.
-    - The `Flask` instance is created with the name `app`.
-    - Two routes are defined:
-        - `'/'` route renders the `index.html` template.
-        - `'/ask'` route handles POST requests from the form in the `index.html` template.
+1.Backend Server:
 
-2. Knowledge Base:
-    - The `knowledge_base` dictionary contains simple question-answer pairs related to IIT ISM. It's used by the chatbot to provide responses.
+Node.js: Used to create the server-side application.
+Express.js: A web application framework for Node.js, used to handle routing and serving static files.
+Child Process Module: Used to execute the C++ program from the Node.js server.
 
-3. Chatbot Logic:
-    - The `chatbot` function takes a user query, converts it to lowercase, checks if it exists in the knowledge base, and returns the corresponding response.
-    - If the query is not in the knowledge base, it returns an error message.
+2.Frontend:
 
-4. User Interface (HTML Templates):
-    - The `templates` folder contains an HTML file named `index.html`.
-    - This HTML file defines a simple form where users can input their queries.
-    - When the form is submitted, the input query is sent to the server for processing.
+HTML: Markup language for creating the structure of web pages.
+CSS: Stylesheet language for styling HTML elements.
+JavaScript (Vanilla): Used for client-side scripting to handle user interactions and make AJAX requests.
+May also use React.js
 
-5. Threading:
-    - The code uses Python's `threading` module to run the Flask web server in a separate thread (`flask_thread`).
-    - The main thread enters into an infinite loop, ensuring that the main program doesn't exit.
-    - This allows the Flask app to run concurrently with other parts of the program.
+3.Communication:
 
-6. Running the Flask App:
-    - The `run_flask` function is defined to start the Flask app in the `flask_thread`.
-    - The main program starts the Flask app in a separate thread and enters into a loop to keep the main thread alive.
+HTTP: Hypertext Transfer Protocol used for communication between the frontend and backend.
+AJAX (Asynchronous JavaScript and XML): Used in the frontend JavaScript to make asynchronous requests to the backend server without reloading the page.
 
-7. Main Execution:
-    - The `if __name__ == '__main__':` block ensures that the code is executed when the script is run directly.
-    - It starts the Flask app in a separate thread and keeps the main thread alive.
+4.C++ Program:
 
-8. User Interaction:
-    - Users interact with the chatbot through a web browser by entering queries in the provided form.
-    - The chatbot processes the queries and displays the results on the web page.
+Executable File: The C++ program for process scheduling simulation is compiled into an executable file that can be executed by the operating system.
 
-Overall, this architecture provides a basic structure for a multi-threaded chatbot with a web interface. .
+5.Package Management:
+
+npm (Node Package Manager): Used for installing and managing Node.js packages, such as Express.js.
+6. Development Environment:
+
+Text Editor or IDE: Used for writing code. Examples include Visual Studio Code.
+This architecture provides a clear separation between the frontend and backend components of the application, making it modular and easier to maintain. The frontend interacts with the backend server via HTTP requests, while the backend server handles the simulation logic and serves static files.
