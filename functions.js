@@ -377,6 +377,30 @@ function outputAverageTimes(output) {
     avgrt /= process;
     return [avgct, avgtat, avgwt, avgrt];
 }
+function displayAverageTimes(output) {
+    let avgct = 0;
+    output.completionTime.forEach((element) => {
+        avgct += element;
+    });
+    avgct /= process;
+    let avgtat = 0;
+    output.turnAroundTime.forEach((element) => {
+        avgtat += element;
+    });
+    avgtat /= process;
+    let avgwt = 0;
+    output.waitingTime.forEach((element) => {
+        avgwt += element;
+    });
+    avgwt /= process;
+    let avgrt = 0;
+    output.responseTime.forEach((element) => {
+        avgrt += element;
+    });
+    avgrt /= process;
+    console.log("Average Completion Time is: "+avgct);
+    return;
+}
 // displays the turnaround time and waiting time for the process
 function setOutput(input, output) {
     //set turn around time and waiting time
@@ -557,16 +581,30 @@ function showFinalTable(input, output, outputDiv) {
     let cpu = document.createElement("p");
     cpu.innerHTML = "CPU Utilization : " + (tbt / lastct) * 100 + "%";
     outputDiv.appendChild(cpu);
+    let arr1=outputAverageTimes(output);
 
     let tp = document.createElement("p");
     tp.innerHTML = "Throughput : " + process / lastct;
     outputDiv.appendChild(tp);
+    let ct = document.createElement("p");
+    ct.innerHTML = "Average Completion Time : " + arr1[0];
+    outputDiv.appendChild(ct);
+    let tat = document.createElement("p");
+    tat.innerHTML = "Average Turn Around Time : " + arr1[1];
+    outputDiv.appendChild(tat);
+    let wt = document.createElement("p");
+    wt.innerHTML = "Average Waiting Time : " + arr1[2];
+    outputDiv.appendChild(wt);
+    let rt = document.createElement("p");
+    rt.innerHTML = "Average Response Time : " + arr1[3];
+    outputDiv.appendChild(rt);
     if (input.contextSwitch > 0) {
 
         let cs = document.createElement("p");
         cs.innerHTML = "Number of Context Switches : " + (output.contextSwitches - 1);
         outputDiv.appendChild(cs);
     }
+    let foot = document.createElement("div");
 }
 //gives the arrow colour
 function toggleTimeLogArrowColor(timeLog, color) {
@@ -955,6 +993,7 @@ function calculateOutput() {
     setUtility(mainInput, mainUtility);
     CPUScheduler(mainInput, mainUtility, mainOutput);
     setOutput(mainInput, mainOutput);
+    outputAverageTimes(mainOutput);
     showOutput(mainInput, mainOutput, outputDiv);
 }
 
