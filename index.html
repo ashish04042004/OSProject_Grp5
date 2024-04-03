@@ -27,6 +27,9 @@
             <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">CPU Process Scheduler</span>
                 <span class="navbar-brand mb-0 h1">OS Project(Group 5)</span>
+                <span class="navbar-brand mb-0 h1"> <img class="img-fluid round logoimg"
+                    src="https://upload.wikimedia.org/wikipedia/en/b/b0/Indian_Institute_of_Technology_%28Indian_School_of_Mines%29%2C_Dhanbad_Logo.png"
+                    alt=""></span>
             </div>
         </nav>
     </header>
@@ -54,7 +57,7 @@
     <section class="p-5 text-sm-start bg-primary">
         <div class="container">
             <label for="algo">
-                <h3 class="text-white">Choose the algorithm:</h3>
+                <h3 class="text-white">Choose the CPU Scheduling Algorithm:</h3>
             </label>
             <form id="algorithms-form">
                 <select name="algo" id="algo" style="border: 2px solid black;
@@ -65,11 +68,10 @@
                     <option value="rr">Round robin (RR)</option>
                     <option value="pp">Priority (Preemptive)</option>
                     <option value="pnp">Priority (Non Preemptive)</option>
-                    <!-- <option value="mq">MultiLeveL Queue</option> -->
                 </select>
             </form>
             <br>
-            <h3 class="text-white mt-3">Preferences :</h3>
+            <h3 class="text-white mt-3">Priority Preference :</h3>
             <ol class="preferences mt-3">
                 <li class="text-white" style="font-size: 1.2rem;">
                     Priority : 1 is
@@ -80,14 +82,14 @@
                 </li>
             </ol>
 
-            <!-- Tabular Column -->
+            
             <table class="mt-5 table main-table">
                 <thead>
                     <tr>
                         <th class="process-id">Process ID</th>
                         <th class="priority hide">Priority</th>
                         <th class="arrival-time">Arrival Time</th>
-                        <th class="process-time" colspan="1">Process Time</th>
+                        <th class="process-time" colspan="1">Burst Time</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -107,9 +109,7 @@
             </table>
             <br>
 
-            <!-- Tabular Column -->
 
-            <!-- Buttons -->
             <button type="button" class="add-btn btn-outline-dark me-3">Add Process</button>
             <button type="button" class="remove-btn btn-outline-dark ms-4">Remove Process</button>
             <div id="context-switch-div" class="mt-5">
@@ -136,7 +136,7 @@
         </div>
     </section>
 
-    <!-- JavaScript tags -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -146,7 +146,6 @@
         integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
         crossorigin="anonymous"></script>
 
-    <!-- Main JavaScript file -->
     <script src="functions.js"></script>
 </body>
 

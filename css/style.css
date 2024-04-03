@@ -9,6 +9,9 @@
   font-style: normal;
     font-size: 17px;
 }
+.logoimg{
+    height:35px;
+}
 
 ol.instructions {
     margin-top: 10px;
@@ -210,7 +213,7 @@ table {
 }
 
 th {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+    background: url(https://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpg), linear-gradient(#777, #444);
     border-left: 1px solid #555;
     border-right: 1px solid #777;
     border-top: 1px solid #555;
@@ -264,11 +267,11 @@ td:last-child {
 }
 
 tr {
-    background: url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    background: url(https://jackrugilhttps://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpge.com/images/misc/noise-diagonal.png);
 }
 
 tr:nth-child(odd) td {
-    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);
+    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagohttps://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpgnal.png);
 }
 
 tr:last-of-type td {
