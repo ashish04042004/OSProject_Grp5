@@ -12,6 +12,12 @@
 .logoimg{
     height:35px;
 }
+.coreimage{
+    border-radius: 15px;
+    box-shadow:#000;
+    height:350px;
+}
+
 
 ol.instructions {
     margin-top: 10px;
@@ -213,7 +219,7 @@ table {
 }
 
 th {
-    background: url(https://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpg), linear-gradient(#777, #444);
+    background: url(https://previews.123rf.com/images/apostrophe/apostrophe1411/ostrophe141100078/33319583-blue-background-with-light-and-dark-blue-color-splash-design-element-angled-from-corner-to-corner.jpg), linear-gradient(#777, #444);
     border-left: 1px solid #555;
     border-right: 1px solid #777;
     border-top: 1px solid #555;
@@ -267,11 +273,11 @@ td:last-child {
 }
 
 tr {
-    background: url(https://jackrugilhttps://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpge.com/images/misc/noise-diagonal.png);
+    background: url(https://jackrugilhttps://thumbs.dreamstime.com/b/abstct-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpge.com/images/misc/noise-diagonal.png);
 }
 
 tr:nth-child(odd) td {
-    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagohttps://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpgnal.png);
+    background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-dihttps://thumbs.dreamstime.com/b/abstract-vector-background-glitch-diagonal-lines-distortion-seamless-noise-texture-aqua-blue-white-backdrop-brushstroke-249871009.jpgnal.png);
 }
 
 tr:last-of-type td {
@@ -289,3 +295,7 @@ tr:last-of-type td:last-child {
     display: flex;
     flex-direction: column;   
 }
+/* .container{
+    height:450px;
+    padding: 30px;
+} */
