@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     font-size: 17px;
 }
 
@@ -278,4 +281,8 @@ tr:last-of-type td:first-child {
 
 tr:last-of-type td:last-child {
     box-shadow: inset -1px -1px 0 #fff;
+}
+.container_in{
+    display: flex;
+    flex-direction: column;   
 }
